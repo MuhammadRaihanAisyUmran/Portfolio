@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)file:///C:/Users/idf31730/Downloads/Raihan%20Umran%20Portfolio.html#work -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Raihan Umran Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="stylesheet" href="./Raihan Umran Portfolio_files/css2">
+<style>
+/* Layout concept: a ladder diagram. Two power rails run down the page and each section hangs off the left rail like a rung. */
+:root{
+  --bg:#EDF1F4; --surface:#F8FAFB; --ink:#0F1B2D; --muted:#4D5C74;
+  --line:#C5D0DB; --wire:#8696AB; --accent:#086B6E; --accent-soft:#D3EAEA;
+  --f-display:'Barlow Semi Condensed','Arial Narrow',Arial,sans-serif;
+  --f-body:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --f-mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0C1520; --surface:#122030; --ink:#E6EDF4; --muted:#9DAEC4;
+    --line:#243449; --wire:#5F7390; --accent:#4FD1C5; --accent-soft:#11383B;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0C1520; --surface:#122030; --ink:#E6EDF4; --muted:#9DAEC4;
+  --line:#243449; --wire:#5F7390; --accent:#4FD1C5; --accent-soft:#11383B;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+html{scroll-padding-top:16px}
+@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
+body{
+  background:var(--bg); color:var(--ink);
+  font:400 16px/1.6 var(--f-body);
+  padding-left:max(16px, env(safe-area-inset-left, 0px));
+  padding-right:max(16px, env(safe-area-inset-right, 0px));
+  padding-block:0;
+}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent); outline-offset:3px}
+h1,h2,h3,p,ul,dl,dd{margin:0}
+ul{padding:0;list-style:none}
+
+.shell{max-width:1120px; margin:0 auto; position:relative}
+.rl{display:none}
+@media (min-width:900px){
+  .shell{padding-inline:56px}
+  .shell::before,.shell::after{content:""; position:absolute; top:0; bottom:0; width:2px; background:var(--line)}
+  .shell::before{left:0}
+  .shell::after{right:0}
+  .rl{display:block; position:absolute; top:10px; font:500 11px/1 var(--f-mono); letter-spacing:.08em; color:var(--muted); background:var(--bg); padding:4px 0}
+  .rl1{left:-6px; transform:translateX(-120%)}
+  .rl2{right:-6px; transform:translateX(120%)}
+  .sec-head::before{content:""; position:absolute; left:-56px; top:.78em; width:44px; height:2px; background:var(--line)}
+}
+
+/* top bar */
+.top{display:flex; justify-content:space-between; align-items:center; gap:16px; padding-block:20px; flex-wrap:wrap}
+.mark{font:700 20px/1 var(--f-display); letter-spacing:.06em; text-decoration:none}
+.top nav{display:flex; gap:18px; font:500 13px/1 var(--f-mono); letter-spacing:.04em}
+.top nav a{text-decoration:none; color:var(--muted); padding-block:6px}
+.top nav a:hover{color:var(--accent)}
+
+/* hero */
+.hero{padding-block:40px 56px; position:relative}
+.kicker{font:500 12px/1.4 var(--f-mono); letter-spacing:.1em; text-transform:uppercase; color:var(--accent)}
+h1{
+  font:700 clamp(2.5rem, 8vw, 5.2rem)/.98 var(--f-display);
+  letter-spacing:-.01em; margin-top:14px; text-wrap:balance; max-width:18ch;
+}
+.lede{max-width:56ch; margin-top:22px; font-size:1.125rem; color:var(--muted)}
+.lede strong{color:var(--ink); font-weight:600}
+
+.rung{margin-top:40px; display:flex; flex-direction:column; gap:14px; border-left:2px solid var(--wire); padding-left:14px}
+.rung .wire{display:none}
+.el{display:flex; flex-direction:row-reverse; justify-content:flex-end; align-items:center; gap:12px}
+.el svg{flex:none; color:var(--ink)}
+.el.coil svg{color:var(--accent)}
+.el .t{font:500 12px/1.2 var(--f-mono); letter-spacing:.04em; color:var(--muted)}
+@media (min-width:700px){
+  .rung{flex-direction:row; align-items:flex-end; gap:0; border:0; padding:0}
+  .rung .wire{display:block; flex:1; height:28px; position:relative; min-width:16px}
+  .rung .wire::after{content:""; position:absolute; left:0; right:0; top:50%; height:2px; margin-top:-1px; background:var(--wire)}
+  .el{flex-direction:column; justify-content:flex-start; align-items:center; gap:8px}
+}
+
+.facts{margin-top:44px; display:grid; gap:18px 32px; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr))}
+.facts div{border-top:2px solid var(--ink); padding-top:10px}
+.facts dt{font:500 11px/1.3 var(--f-mono); letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
+.facts dd{margin-top:6px; font-size:.95rem}
+
+/* sections */
+.sec{padding-block:48px 24px}
+.sec-head{position:relative; margin-bottom:28px}
+.eyebrow{font:500 12px/1.4 var(--f-mono); letter-spacing:.1em; text-transform:uppercase; color:var(--accent)}
+h2{font:700 clamp(1.8rem, 4.5vw, 2.6rem)/1.05 var(--f-display); margin-top:6px; text-wrap:balance}
+h3{font:600 1.35rem/1.15 var(--f-display); text-wrap:balance}
+
+.work{display:grid; gap:20px; grid-template-columns:minmax(0,1fr)}
+.card{background:var(--surface); border:1px solid var(--line); border-radius:4px; padding:24px; min-width:0}
+.card .meta{display:flex; flex-wrap:wrap; gap:8px 12px; align-items:center; margin-bottom:14px}
+.tag{font:500 11px/1.3 var(--f-mono); letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
+.pill{display:inline-flex; align-items:center; gap:6px; font:500 11px/1 var(--f-mono); letter-spacing:.08em; text-transform:uppercase; color:var(--accent); border:1px solid var(--accent); padding:4px 8px; border-radius:2px}
+.pill::before{content:""; width:6px; height:6px; border-radius:50%; background:var(--accent)}
+.card p{margin-top:10px; color:var(--muted)}
+.card p.lead{color:var(--ink)}
+.pts{margin-top:14px; display:grid; gap:8px}
+.pts li{position:relative; padding-left:18px; font-size:.95rem}
+.pts li::before{content:""; position:absolute; left:0; top:.78em; width:10px; height:2px; background:var(--accent)}
+.span2{grid-column:1/-1}
+.split{display:grid; gap:28px; grid-template-columns:minmax(0,1fr); align-items:center}
+@media (min-width:900px){
+  .work{grid-template-columns:repeat(2, minmax(0,1fr))}
+  .split{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}
+}
+
+/* machine count diagram */
+.machines{display:grid; gap:16px}
+.mrow{display:flex; flex-wrap:wrap; align-items:center; gap:10px 14px}
+.mrow .lab{width:56px; font:500 11px/1 var(--f-mono); letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+.grid{display:flex; gap:5px; flex-wrap:wrap}
+.grid i{width:18px; height:30px; border:2px solid var(--wire); border-radius:2px; display:block}
+.after .grid i{background:var(--accent); border-color:var(--accent)}
+.mrow b{font:700 2rem/1 var(--f-display)}
+.after b{color:var(--accent)}
+.mnote{font:500 11px/1.4 var(--f-mono); letter-spacing:.04em; color:var(--muted)}
+
+/* phasor */
+.phasor{width:100%; max-width:300px; height:auto; display:block; margin-top:18px}
+.phasor text{font:500 11px var(--f-mono); fill:var(--muted)}
+.phasor .ax{stroke:var(--wire); stroke-width:1.5; fill:none}
+.phasor .gd{stroke:var(--wire); stroke-width:1; stroke-dasharray:3 3; fill:none}
+.phasor .iv{stroke:var(--ink); stroke-width:2.5; fill:none}
+.phasor .ir{stroke:var(--accent); stroke-width:3.5; fill:none}
+.phasor .hd{fill:var(--ink)}
+.phasor .hdr{fill:var(--accent)}
+.phasor .ar{stroke:var(--accent); stroke-width:1.5; fill:none}
+.phasor .eq{fill:var(--ink); font-size:12px}
+.phasor .dl{fill:var(--accent); font-size:13px}
+
+/* defect bars */
+.bars{margin-top:20px; display:grid; gap:10px}
+.bar{display:grid; grid-template-columns:96px minmax(0,1fr) 40px; align-items:center; gap:12px}
+.bar span{font:500 11px/1.2 var(--f-mono); letter-spacing:.06em; text-transform:uppercase; color:var(--muted)}
+.bar .trk{height:14px; background:var(--accent-soft); border-radius:2px}
+.bar .trk i{display:block; height:100%; width:var(--w); background:var(--wire); border-radius:2px}
+.bar.tgt .trk i{background:var(--accent)}
+.bar b{font:700 1.15rem/1 var(--f-display); text-align:right}
+
+.more{margin-top:20px; display:grid; gap:20px; grid-template-columns:minmax(0,1fr)}
+@media (min-width:700px){.more{grid-template-columns:repeat(2, minmax(0,1fr))}}
+.more h3{font-size:1.15rem}
+
+/* experience */
+.tl{margin-left:6px; padding-left:26px; border-left:2px solid var(--line); display:grid; gap:34px}
+.tl li{position:relative}
+.tl > li::before{content:""; position:absolute; left:-33px; top:.45em; width:12px; height:12px; border-radius:50%; background:var(--bg); border:2px solid var(--wire)}
+.tl > li.now::before{background:var(--accent); border-color:var(--accent)}
+.when{font:500 12px/1.3 var(--f-mono); letter-spacing:.06em; color:var(--muted)}
+.tl h3{margin-top:4px}
+.org{color:var(--muted); font-size:.95rem; margin-top:2px}
+.roles{margin-top:12px; display:grid; gap:8px}
+.roles li{position:relative; padding-left:18px; font-size:.95rem}
+.roles li::before{content:""; position:absolute; left:0; top:.78em; width:10px; height:2px; background:var(--accent)}
+.roles b{font-weight:600}
+.tl .sm{margin-top:8px; font-size:.95rem; color:var(--muted); max-width:62ch}
+
+/* skills */
+.skills{display:grid; gap:28px 32px; grid-template-columns:repeat(auto-fit, minmax(230px, 1fr))}
+.skills h3{font:500 11px/1.3 var(--f-mono); letter-spacing:.1em; text-transform:uppercase; color:var(--accent); padding-bottom:10px; border-bottom:2px solid var(--ink)}
+.skills ul{margin-top:12px; display:grid; gap:6px; font-size:.95rem}
+
+.edu{display:grid; gap:20px; grid-template-columns:minmax(0,1fr)}
+@media (min-width:900px){.edu{grid-template-columns:repeat(2, minmax(0,1fr))}}
+.edu h3{font-size:1.2rem}
+.edu .when{display:block; margin-bottom:8px}
+.edu .thesis{margin-top:12px; padding-top:12px; border-top:1px solid var(--line); font-size:.95rem}
+.edu .thesis em{font-style:normal; color:var(--muted)}
+
+/* contact */
+.contact{padding-block:56px 72px}
+.contact .big{font:700 clamp(1.7rem, 4.6vw, 2.8rem)/1.08 var(--f-display); max-width:26ch; text-wrap:balance}
+.mail{margin-top:26px; display:flex; flex-wrap:wrap; gap:12px; align-items:center}
+.mail code{font:500 15px/1.2 var(--f-mono); background:var(--surface); border:1px solid var(--line); border-radius:3px; padding:11px 14px; overflow-wrap:anywhere; user-select:all}
+.mail button{font:500 13px/1 var(--f-mono); letter-spacing:.06em; background:var(--ink); color:var(--bg); border:0; border-radius:3px; padding:12px 16px; cursor:pointer}
+.mail button:hover{background:var(--accent); color:var(--bg)}
+.loc{margin-top:16px; color:var(--muted); font-size:.95rem}
+footer{border-top:1px solid var(--line); padding-block:20px 28px; font:400 12px/1.5 var(--f-mono); color:var(--muted); display:flex; flex-wrap:wrap; gap:6px 18px; justify-content:space-between}
+</style>
+
+<div class="shell" id="top">
+  <span class="rl rl1" aria-hidden="true">L1</span>
+  <span class="rl rl2" aria-hidden="true">L2</span>
+
+  <header class="top">
+    <a class="mark" href="file:///C:/Users/idf31730/Downloads/Raihan%20Umran%20Portfolio.html#top" aria-label="Back to top">MRU</a>
+    <nav aria-label="Sections">
+      <a href="file:///C:/Users/idf31730/Downloads/Raihan%20Umran%20Portfolio.html#work">Work</a>
+      <a href="file:///C:/Users/idf31730/Downloads/Raihan%20Umran%20Portfolio.html#experience">Experience</a>
+      <a href="file:///C:/Users/idf31730/Downloads/Raihan%20Umran%20Portfolio.html#skills">Skills</a>
+      <a href="file:///C:/Users/idf31730/Downloads/Raihan%20Umran%20Portfolio.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <p class="kicker">Electrical Engineering Graduate</p>
+    <h1>Muhammad Raihan A'isy Umran</h1>
+    <p class="lede">I prepare, synchronize and troubleshoot machining processes for automotive production at <strong>PT Suzuki Indomobil Motor</strong>. My degree is in instrumentation and control, and my next step is <strong>PLC and industrial automation</strong>.</p>
+
+    <div class="rung" role="img" aria-label="Ladder rung: an electrical engineering degree and more than two years at Suzuki energize PLC and automation work.">
+      <span class="wire"></span>
+      <div class="el"><span class="t">S1 Electrical Eng.</span>
+        <svg width="34" height="28" viewBox="0 0 34 28" aria-hidden="true"><path d="M0 14h12M22 14h12M12 3v22M22 3v22" stroke="currentColor" stroke-width="2.5" fill="none"></path></svg></div>
+      <span class="wire"></span>
+      <div class="el"><span class="t">PT Forisa Nusapersada</span>
+        <svg width="34" height="28" viewBox="0 0 34 28" aria-hidden="true"><path d="M0 14h12M22 14h12M12 3v22M22 3v22" stroke="currentColor" stroke-width="2.5" fill="none"></path></svg></div>
+      <span class="wire"></span>
+      <div class="el coil">
+        <div class="el"><span class="t">PT Suzuki Indomobil Motor</span>
+        <svg width="34" height="28" viewBox="0 0 34 28" aria-hidden="true"><path d="M0 14h12M22 14h12M12 3v22M22 3v22" stroke="currentColor" stroke-width="2.5" fill="none"></path></svg></div></div>
+      <span class="wire"></span>
+    </div>
+
+    <dl class="facts">
+      <div><dt>Now</dt><dd>Machining Engineering Staff at PT Suzuki Indomobil Motor</dd></div>
+      <div><dt>Degree</dt><dd>S1 Electrical Engineering, Instrumentation and Control, Universitas Jenderal Soedirman</dd></div>
+      <div><dt>Base</dt><dd>Bekasi, Indonesia</dd></div>
+      <div><dt>Interested On</dt><dd>PLC, industrial automation and instrumentation engineering roles</dd></div>
+    </dl>
+  </section>
+
+  <section class="sec" id="work">
+    <div class="sec-head">
+      <p class="eyebrow">Selected work</p>
+      <h2>Lines, loss angles and defect rates</h2>
+    </div>
+
+    <div class="work">
+      <article class="card span2">
+        <div class="split">
+          <div>
+            <div class="meta"><span class="tag">PT Suzuki Indomobil Motor · Machining</span><span class="pill">In progress</span></div>
+            <h3>Case transmission line renewal</h3>
+            <p class="lead">I am handling the renewal of one case transmission machining line: the number of machines goes from 8 to 4, and the layout is redesigned around the new process.</p>
+            <ul class="pts">
+              <li>Process change that consolidates the line</li>
+              <li>Layout redesign for the smaller line</li>
+              <li>Runs alongside new model crankshaft process preparation and program synchronization across machining lines</li>
+            </ul>
+          </div>
+          <div class="machines" role="img" aria-label="Machines on the line: 8 before the renewal, 4 after.">
+            <div class="mrow before"><span class="lab">Before</span><div class="grid"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><b>8</b></div>
+            <div class="mrow after"><span class="lab">After</span><div class="grid"><i></i><i></i><i></i><i></i></div><b>4</b></div>
+            <p class="mnote">Machines on one line</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="meta"><span class="tag">Thesis · PLN internship</span></div>
+        <h3>Tan Delta analysis of a 180 MVA transformer</h3>
+        <p class="lead">My thesis analyzed Tan Delta test results on a 180 MVA power transformer at PLTGU Belawan. At PT PLN UPHK Medan I supported high-voltage insulation testing on 180 MVA transformers.</p>
+        <ul class="pts">
+          <li>Tan Delta and insulation resistance measurements per IEEE Std 62-1995, using the Megger TRAX220</li>
+          <li>Data analysis to judge insulation condition and recommend preventive maintenance</li>
+        </ul>
+        <svg class="phasor" viewBox="0 0 280 200" role="img" aria-label="Phasor diagram of an insulation: total current I leads voltage V by 90 degrees minus the loss angle delta. Tan delta equals resistive current I R divided by capacitive current I C.">
+          <line class="ax" x1="40" y1="170" x2="262" y2="170"></line>
+          <polygon class="hd" points="270,170 260,166 260,174" style="fill:var(--wire)"></polygon>
+          <text x="262" y="190">V</text>
+          <line class="ax" x1="40" y1="170" x2="40" y2="48"></line>
+          <polygon class="hd" points="40,40 36,50 44,50"></polygon>
+          <line class="iv" x1="40" y1="170" x2="40" y2="50"></line>
+          <text x="30" y="96" text-anchor="end">I_C</text>
+          <line class="ir" x1="40" y1="170" x2="100" y2="170"></line>
+          <polygon class="hdr" points="110,170 99,165 99,175"></polygon>
+          <text x="76" y="190">I_R</text>
+          <line class="gd" x1="110" y1="170" x2="110" y2="40"></line>
+          <line class="gd" x1="40" y1="40" x2="110" y2="40"></line>
+          <line class="iv" x1="40" y1="170" x2="106" y2="48"></line>
+          <polygon class="hd" points="110,40 99,46 107,52"></polygon>
+          <text x="118" y="38">I</text>
+          <path class="ar" d="M40 124 A46 46 0 0 1 60.5 128.9"></path>
+          <text class="dl" x="49" y="116">δ</text>
+          <text class="eq" x="150" y="108">tan δ = I_R / I_C</text>
+          <text x="150" y="126">δ exaggerated</text>
+        </svg>
+      </article>
+
+      <article class="card">
+        <div class="meta"><span class="tag">PT Suzuki Indomobil Motor · Die Casting</span></div>
+        <h3>LPDC cylinder head process control</h3>
+        <p class="lead">Low Pressure Die Casting of cylinder heads: I monitored process stability and worked on bringing the defect rate down.</p>
+        <ul class="pts">
+          <li>OEE calculated across six LPDC machines to find losses and raise availability</li>
+          <li>Cp/Cpk on key process parameters for every LPDC machine</li>
+          <li>Sandcore (Nakago), venting, lubrication and die temperature control evaluated for casting quality</li>
+          <li>5 Why and Fishbone analysis on defects</li>
+        </ul>
+        <div class="bars" role="img" aria-label="Defect rate: about 3 percent at the start, target 1 percent.">
+          <div class="bar"><span>Starting point</span><div class="trk"><i style="--w:100%"></i></div><b>~3%</b></div>
+          <div class="bar tgt"><span>Target</span><div class="trk"><i style="--w:33.3%"></i></div><b>1%</b></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="more">
+      <article class="card">
+        <div class="meta"><span class="tag">Engineering Development Program</span></div>
+        <h3>Robots and conveyors</h3>
+        <ul class="pts">
+          <li>Forging cutting machine conveyor: waiting time cut from 5 s to 2 s by lowering RPM</li>
+          <li>Die Casting 6-axis robot: motion reworked from a 270° rightward turn to a 90° leftward move to shorten cycle time</li>
+          <li>Plastic Injection take-out robot: unnecessary 180° wrist rotation removed</li>
+          <li>Seat Assembly return jig conveyor: sequence control added to cut idle energy use</li>
+        </ul>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="tag">Suzuki · Painting</span></div>
+        <h3>Color and booth airflow</h3>
+        <ul class="pts">
+          <li>Color matching for new colors against OEM standards</li>
+          <li>Delta E color difference checked with a Konica Minolta spectrophotometer</li>
+          <li>Booth exhaust airflow measured with Kanomax instruments</li>
+          <li>Specification sheets for the Electrostatic Eliminator Space &amp; Gun Project</li>
+        </ul>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="tag">PT Forisa Nusapersada</span></div>
+        <h3>Sieving yield</h3>
+        <ul class="pts">
+          <li>Material loss reduced by optimizing the 200-mesh sieving machine</li>
+          <li>Initial sieving output pipe designed in AutoCAD for the Engineering Development team</li>
+          <li>PPS and root cause analysis applied to production reliability</li>
+        </ul>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="tag">Lab assistant</span></div>
+        <h3>Teaching PLC programming</h3>
+        <ul class="pts">
+          <li>Taught students PLC programming and ladder logic</li>
+          <li>Guided simulation work in Factory I/O and CX-Designer</li>
+          <li>Practicum software: Siemens SIMATIC Step 7, Omron CX-One, Factory I/O</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec" id="experience">
+    <div class="sec-head">
+      <p class="eyebrow">Experience</p>
+      <h2>From power networks to plant floors</h2>
+    </div>
+
+    <ul class="tl">
+      <li class="now">
+        <p class="when">Aug 2024 to present</p>
+        <h3>PT Suzuki Indomobil Motor</h3>
+        <p class="org">Automotive manufacturing, Indonesia</p>
+        <ul class="roles">
+          <li><b>Machining Engineering Foreman.</b> New model crankshaft process preparation, machining program synchronization, case transmission line renewal, troubleshooting.</li>
+          <li><b>Die Casting Production, Cylinder Head (LPDC).</b> Process stability, OEE, Cp/Cpk, defect reduction.</li>
+          <li><b>Manufacturing Engineering, Painting.</b> Color matching, Delta E checks, booth airflow, equipment specifications.</li>
+          <li><b>Engineering Development Program.</b> Rotations through Pressing, Welding, Painting, Assembly, Engine and Transmission, with improvement projects on robots and conveyors.</li>
+        </ul>
+      </li>
+      <li>
+        <p class="when">Feb 2024 to May 2024</p>
+        <h3>Engineering Development Staff</h3>
+        <p class="org">PT Forisa Nusapersada</p>
+        <p class="sm">Evaluated factory processes for bottlenecks, optimized a 200-mesh sieving machine to cut material loss, and designed a sieving output pipe in AutoCAD.</p>
+      </li>
+      <li>
+        <p class="when">May 2022 to Jul 2022</p>
+        <h3>Intern</h3>
+        <p class="org">PT PLN (Persero) UPHK Medan</p>
+        <p class="sm">Supported high-voltage insulation testing on 180 MVA power transformers, with Tan Delta and insulation resistance measurements.</p>
+      </li>
+      <li>
+        <p class="when">Jan 2022 to Mar 2022</p>
+        <h3>Intern</h3>
+        <p class="org">PT PLN (Persero) ULP Rayon Binjai Timur</p>
+        <p class="sm">Assisted technicians with medium-voltage overhead line (HUTM) maintenance and pole installation.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="sec" id="skills">
+    <div class="sec-head">
+      <p class="eyebrow">Skills</p>
+      <h2>What I work with</h2>
+    </div>
+
+    <div class="skills">
+      <div>
+        <h3>Automation and control</h3>
+        <ul>
+          <li>PLC programming, ladder logic</li>
+          <li>Omron CX-One, CX-Designer</li>
+          <li>Siemens SIMATIC Step 7</li>
+          <li>Factory I/O simulation</li>
+          <li>HMI programming</li>
+          <li>Sensors and actuators</li>
+          <li>Electrical control circuits</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Manufacturing and quality</h3>
+        <ul>
+          <li>Root cause analysis: 5 Why, Fishbone, PDCA, PPS</li>
+          <li>OEE, Cp/Cpk</li>
+          <li>Kaizen, TPM, Lean, 5S</li>
+          <li>SOP standardization</li>
+          <li>Machine troubleshooting and reliability</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Tools</h3>
+        <ul>
+          <li>AutoCAD</li>
+          <li>CNC programming</li>
+          <li>Matlab</li>
+          <li>Power BI, Microsoft Excel</li>
+          <li>C/C++ (Arduino), R, HTML, CSS</li>
+        <li>NX UG</li></ul>
+      </div>
+      <div>
+        <h3>Languages</h3>
+        <ul>
+          <li>English, TOEFL 593</li>
+          <li>Bahasa Indonesia</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="education">
+    <div class="sec-head">
+      <p class="eyebrow">Education</p>
+      
+    </div>
+
+    <div class="edu">
+      <article class="card">
+        <p class="when">Sep 2018 to Aug 2023</p>
+        <h3>Universitas Jenderal Soedirman</h3>
+        <p>Bachelor of Electrical Engineering, specialization in Instrumentation and Control. GPA 3.04 / 4.00.</p>
+        <p class="thesis"><em>Thesis</em><br>Analysis of Tan Delta Test Results on a 180 MVA Power Transformer at PLTGU Belawan</p>
+      </article>
+      <article class="card">
+        <p class="when">Certificates and activities</p>
+        <ul class="pts">
+          <li>5 PLC in a Day</li>
+          <li>Responsive Web Design</li>
+          <li>Introduction to Data Science with R</li>
+          <li>Google Analytics for Beginners</li>
+          <li>TOEFL, score 593</li>
+          <li>Chairman of the Control System practicum coordinators, ALTEK (Aliansi Laboratorium Teknik Elektro), Dec 2021 to May 2022</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="sec-head">
+      <p class="eyebrow">Contact</p>
+    </div>
+    <p class="big">Open to PLC, industrial automation and instrumentation engineering roles.</p>
+    <div class="mail">
+      <code id="email">raihanumran0@gmail.com</code>
+      <button type="button" id="copy">Copy</button>
+    </div>
+    <p class="loc">Based in Bekasi, Indonesia. English and Bahasa Indonesia.</p>
+  </section>
+
+  <footer>
+    <span>Muhammad Raihan A'isy Umran</span>
+    <span>Updated November 2026</span>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var btn = document.getElementById('copy');
+  var el = document.getElementById('email');
+  if (!btn || !el) return;
+  function select() {
+    try {
+      var r = document.createRange();
+      r.selectNodeContents(el);
+      var s = window.getSelection();
+      s.removeAllRanges();
+      s.addRange(r);
+    } catch (e) {}
+  }
+  function flash(msg) {
+    btn.textContent = msg;
+    setTimeout(function () { btn.textContent = 'Copy'; }, 1800);
+  }
+  btn.addEventListener('click', function () {
+    var text = el.textContent.trim();
+    try {
+      navigator.clipboard.writeText(text).then(
+        function () { flash('Copied'); },
+        function () { select(); flash('Selected'); }
+      );
+    } catch (e) {
+      select();
+      flash('Selected');
+    }
+  });
+})();
+</script>
+
+</body></html>
